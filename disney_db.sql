@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `disney` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `disney`;
 -- MySQL dump 10.13  Distrib 8.0.20, for Linux (x86_64)
 --
 -- Host: localhost    Database: disney
@@ -49,7 +47,7 @@ DROP TABLE IF EXISTS `disney_char`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `disney_char` (
   `movie_title` varchar(38) DEFAULT NULL,
-  `release_date` varchar(10) DEFAULT NULL,
+  `release_date` date DEFAULT NULL,
   `hero` varchar(26) DEFAULT NULL,
   `villian` varchar(36) DEFAULT NULL,
   `song` varchar(34) DEFAULT NULL
@@ -75,7 +73,7 @@ DROP TABLE IF EXISTS `movie_gross`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `movie_gross` (
   `movie_title` varchar(40) DEFAULT NULL,
-  `release_date` varchar(10) DEFAULT NULL,
+  `release_date` date DEFAULT NULL,
   `genre` varchar(19) DEFAULT NULL,
   `mpaa_rating` varchar(9) DEFAULT NULL,
   `total_gross` bigint DEFAULT NULL,
@@ -154,4 +152,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-20  8:54:45
+-- Dump completed on 2020-05-20  9:31:44
